@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>English Listening Gallery</title>
+
+    <style>
+        :root {
+            --background: #f5f3eb;
+            --card: #ffffff;
+            --green: #244b3b;
+            --light-green: #e4ebdf;
+            --text: #27352d;
+            --muted: #778078;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--background);
+            color: var(--text);
+        }
+
+        .hero {
+            background: var(--green);
+            color: white;
+            text-align: center;
+            padding: 65px 20px 75px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 14px;
+            border: 1px solid #819b8b;
+            border-radius: 30px;
+            font-size: 12px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #e0eadd;
+        }
+
+        .hero h1 {
+            font-size: clamp(32px, 6vw, 52px);
+            margin: 24px 0 12px;
+            letter-spacing: -1px;
+        }
+
+        .hero p {
+            color: #d3dfd5;
+            font-size: 16px;
+            line-height: 1.7;
+            max-width: 480px;
+            margin: auto;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: -30px auto 0;
+            padding: 0 22px 50px;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            margin: 35px 0 22px;
+        }
+
+        .section-heading h2 {
+            font-size: 22px;
+            margin: 0;
+        }
+
+        .count {
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px #233b2b0c;
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px #233b2b15;
+        }
+
+        .card img {
+            display: block;
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            background: var(--light-green);
+        }
+
+        .card-content {
+            padding: 22px;
+        }
+
+        .number {
+            color: #73866f;
+            font-size: 12px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .card h3 {
+            font-size: 21px;
+            line-height: 1.5;
+            margin: 12px 0 20px;
+        }
+
+        .audio-label {
+            display: block;
+            color: var(--muted);
+            font-size: 12px;
+            margin-bottom: 9px;
+        }
+
+        audio {
+            width: 100%;
+            height: 42px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 20px 35px;
+            color: var(--muted);
+            font-size: 13px;
+            line-height: 1.8;
+        }
+
+        @media (max-width: 650px) {
+            .hero {
+                padding: 55px 18px 65px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .card img {
+                height: 230px;
+            }
+
+            .container {
+                padding: 0 16px 35px;
+            }
+
+            .card h3 {
+                font-size: 19px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="hero">
+        <span class="tag">English Project</span>
+
+        <h1>English Listening Gallery</h1>
+
+        <p>
+            Explore the world of wildlife, nature and our planet
+            through five sentences.
+        </p>
+    </header>
+
+    <main class="container">
+
+        <div class="section-heading">
+            <h2>Listen & Explore</h2>
+            <span class="count">05 SENTENCES</span>
+        </div>
+
+        <section class="gallery">
+
+            <!-- Sentence 1 -->
+            <article class="card">
+                <img
+                    src="images/Tiger.jpeg"
+                    alt="A tiger in the wild"
+                    loading="lazy"
+                >
+
+                <div class="card-content">
+                    <span class="number">SENTENCE 01</span>
+
+                    <h3>A tiger is a wild animal.</h3>
+
+                    <span class="audio-label">LISTEN TO THE SENTENCE</span>
+
+                    <audio controls preload="none">
+                        <source
+                            src="audio/Tiger.mp3"
+                            type="audio/mpeg"
+                        >
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+            </article>
+
+            <!-- Sentence 2 -->
+            <article class="card">
+                <img
+                    src="images/Earth.jpeg"
+                    alt="Planet Earth"
+                    loading="lazy"
+                >
+
+                <div class="card-content">
+                    <span class="number">SENTENCE 02</span>
+
+                    <h3>We live on Earth.</h3>
+
+                    <span class="audio-label">LISTEN TO THE SENTENCE</span>
+
+                    <audio controls preload="none">
+                        <source
+                            src="audio/Earth.mp3"
+                            type="audio/mpeg"
+                        >
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+            </article>
+
+            <!-- Sentence 3 -->
+            <article class="card">
+                <img
+                    src="images/Destroy.jpeg"
+                    alt="A green jungle"
+                    loading="lazy"
+                >
+
+                <div class="card-content">
+                    <span class="number">SENTENCE 03</span>
+
+                    <h3>They are destroying the jungle.</h3>
+
+                    <span class="audio-label">LISTEN TO THE SENTENCE</span>
+
+                    <audio controls preload="none">
+                        <source
+                            src="audio/Jungle.mp3"
+                            type="audio/mpeg"
+                        >
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+            </article>
+
+            <!-- Sentence 4 -->
+            <article class="card">
+                <img
+                    src="images/Golestan.jpeg"
+                    alt="Golestan Forest"
+                    loading="lazy"
+                >
+
+                <div class="card-content">
+                    <span class="number">SENTENCE 04</span>
+
+                    <h3>I went to Golestan Forest last year.</h3>
+
+                    <span class="audio-label">LISTEN TO THE SENTENCE</span>
+
+                    <audio controls preload="none">
+                        <source
+                            src="audio/Forest.mp3"
+                            type="audio/mpeg"
+                        >
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+            </article>
+
+            <!-- Sentence 5 -->
+            <article class="card">
+                <img
+                    src="images/lion.jpeg"
+                    alt="The Persian lion"
+                    loading="lazy"
+                >
+
+                <div class="card-content">
+                    <span class="number">SENTENCE 05</span>
+
+                    <h3>The Persian lion died out about 75 years ago.</h3>
+
+                    <span class="audio-label">LISTEN TO THE SENTENCE</span>
+
+                    <audio controls preload="none">
+                        <source
+                            src="audio/lion.mp3"
+                            type="audio/mpeg"
+                        >
+                        Your browser does not support audio.
+                    </audio>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <footer>
+        English Listening Project<br>
+        Learn English, explore nature.
+    </footer>
+
+</body>
+</html>
